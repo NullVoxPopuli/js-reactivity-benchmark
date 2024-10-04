@@ -20,6 +20,12 @@ importers:
       '@solidjs/reactivity':
         specifier: ^0.0.9
         version: 0.0.9
+      '@starbeam-lite/core':
+        specifier: ^0.0.1
+        version: 0.0.1(@starbeam-lite/shared@0.0.1)
+      '@starbeam-lite/shared':
+        specifier: ^0.0.1
+        version: 0.0.1
       '@vue/reactivity':
         specifier: ^3.5.6
         version: 3.5.6
@@ -647,6 +653,17 @@ packages:
 
   '@solidjs/reactivity@0.0.9':
     resolution: {integrity: sha512-duaaHwXTTY/YF+H9AT4ZEiL6H9FwMxQOMrTIDpsRYLBkbl3Y/FKaeoYu7CK4Ontbra6/LAi0DZyb/M6vCcJoMw==}
+
+  '@starbeam-lite/core@0.0.1':
+    resolution: {integrity: sha512-+dWcYWYvOJdwaw2p1QbP3SnaHDtSpTexLOkOhTIvmQKsDKcNWi9Ig+zHT/pCbN5CohXIraJ8X79enyHHNGl/Ew==}
+    peerDependencies:
+      '@starbeam-lite/shared': ~0.0.1
+    peerDependenciesMeta:
+      '@starbeam-lite/shared':
+        optional: true
+
+  '@starbeam-lite/shared@0.0.1':
+    resolution: {integrity: sha512-t87S2yWWurJruJDiMk9IDhx8hFWZKzvBcUUWa6WAUFc0VeEpv2VbzjOyVUjNCnXEuOY4uTv83c/JFyMf9QnQQw==}
 
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
@@ -1491,6 +1508,12 @@ snapshots:
     optional: true
 
   '@solidjs/reactivity@0.0.9': {}
+
+  '@starbeam-lite/core@0.0.1(@starbeam-lite/shared@0.0.1)':
+    optionalDependencies:
+      '@starbeam-lite/shared': 0.0.1
+
+  '@starbeam-lite/shared@0.0.1': {}
 
   '@types/estree@1.0.5': {}
 

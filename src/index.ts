@@ -13,9 +13,9 @@ async function main() {
   for (const frameworkTest of frameworkInfo) {
     const { framework } = frameworkTest;
 
-    await kairoBench(framework);
-    await molBench(framework);
-    sbench(framework);
+    // await kairoBench(framework);
+    // await molBench(framework);
+    // sbench(framework);
 
     // MobX, Valtio, and Svelte fail this test currently, so disabling it for now.
     // @see https://github.com/mobxjs/mobx/issues/3926

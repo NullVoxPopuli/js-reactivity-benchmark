@@ -30,6 +30,7 @@ We're also working on enabling consistent logging and efficient tracking of GC t
 - [S.js](https://github.com/adamhaile/S)
 - [Signia](https://github.com/tldraw/signia)
 - [Solid](https://github.com/solidjs/solid)
+- [Starbeam Lite](https://github.com/starbeamjs/starbeam-lite)
 - [Svelte v5](https://svelte.dev/blog/runes)
 - [TC39 Signals Proposal](https://github.com/tc39/proposal-signals) [polyfill](https://github.com/proposal-signals/signal-polyfill)
 - [uSignal](https://github.com/WebReflection/usignal)

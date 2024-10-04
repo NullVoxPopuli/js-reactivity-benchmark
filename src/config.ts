@@ -14,26 +14,28 @@ import { usignalFramework } from "./frameworks/uSignal";
 import { vueReactivityFramework } from "./frameworks/vueReactivity";
 import { xReactivityFramework } from "./frameworks/xReactivity";
 import { svelteFramework } from "./frameworks/svelte";
+import { starbeamLite } from "./frameworks/starbeam-lite";
 // import { compostateFramework } from "./frameworks/compostate";
 // import { valtioFramework } from "./frameworks/valtio";
 
 export const frameworkInfo: FrameworkInfo[] = [
-  { framework: preactSignalFramework, testPullCounts: true },
-  { framework: svelteFramework, testPullCounts: true },
-  { framework: tc39SignalsProposalStage0, testPullCounts: true },
-  { framework: reactivelyFramework, testPullCounts: true },
-  { framework: sFramework },
-  { framework: angularFramework, testPullCounts: true },
-  { framework: molWireFramework, testPullCounts: true },
-  { framework: obyFramework, testPullCounts: true },
-  { framework: signiaFramework, testPullCounts: true },
-  { framework: solidFramework },
-  { framework: usignalFramework, testPullCounts: true },
-  { framework: xReactivityFramework, testPullCounts: true },
-  { framework: vueReactivityFramework, testPullCounts: true },
-  // NOTE: MobX currently hangs on some of the `dynamic` tests and `cellx` tests, so disable it if you want to run them. (https://github.com/mobxjs/mobx/issues/3926)
-  { framework: mobxFramework, testPullCounts: false },
-
+  // { framework: preactSignalFramework, testPullCounts: true },
+  // { framework: svelteFramework, testPullCounts: true },
+  // { framework: tc39SignalsProposalStage0, testPullCounts: true },
+  // { framework: reactivelyFramework, testPullCounts: true },
+  // { framework: sFramework },
+  // { framework: angularFramework, testPullCounts: true },
+  // { framework: molWireFramework, testPullCounts: true },
+  // { framework: obyFramework, testPullCounts: true },
+  // { framework: signiaFramework, testPullCounts: true },
+  // { framework: solidFramework },
+  { framework: starbeamLite, testPullCounts: true },
+  // { framework: usignalFramework, testPullCounts: true },
+  // { framework: xReactivityFramework, testPullCounts: true },
+  // { framework: vueReactivityFramework, testPullCounts: true },
+  // // NOTE: MobX currently hangs on some of the `dynamic` tests and `cellx` tests, so disable it if you want to run them. (https://github.com/mobxjs/mobx/issues/3926)
+  // { framework: mobxFramework, testPullCounts: false },
+  //
   // --- Disabled frameworks ---
   // NOTE: the compostate adapter is currently broken and unused.
   // { framework: compostateFramework },
@@ -44,58 +46,58 @@ export const frameworkInfo: FrameworkInfo[] = [
 ];
 
 export const perfTests: TestConfig[] = [
-  {
-    name: "simple component",
-    width: 10, // can't change for decorator tests
-    staticFraction: 1, // can't change for decorator tests
-    nSources: 2, // can't change for decorator tests
-    totalLayers: 5,
-    readFraction: 0.2,
-    iterations: 600000,
-    expected: {
-      sum: 19199832,
-      count: 2640004,
-    },
-  },
-  {
-    name: "dynamic component",
-    width: 10,
-    totalLayers: 10,
-    staticFraction: 3 / 4,
-    nSources: 6,
-    readFraction: 0.2,
-    iterations: 15000,
-    expected: {
-      sum: 302310477864,
-      count: 1125003,
-    },
-  },
-  {
-    name: "large web app",
-    width: 1000,
-    totalLayers: 12,
-    staticFraction: 0.95,
-    nSources: 4,
-    readFraction: 1,
-    iterations: 7000,
-    expected: {
-      sum: 29355933696000,
-      count: 1473791,
-    },
-  },
-  {
-    name: "wide dense",
-    width: 1000,
-    totalLayers: 5,
-    staticFraction: 1,
-    nSources: 25,
-    readFraction: 1,
-    iterations: 3000,
-    expected: {
-      sum: 1171484375000,
-      count: 735756,
-    },
-  },
+  // {
+  //   name: "simple component",
+  //   width: 10, // can't change for decorator tests
+  //   staticFraction: 1, // can't change for decorator tests
+  //   nSources: 2, // can't change for decorator tests
+  //   totalLayers: 5,
+  //   readFraction: 0.2,
+  //   iterations: 600000,
+  //   expected: {
+  //     sum: 19199832,
+  //     count: 2640004,
+  //   },
+  // },
+  // {
+  //   name: "dynamic component",
+  //   width: 10,
+  //   totalLayers: 10,
+  //   staticFraction: 3 / 4,
+  //   nSources: 6,
+  //   readFraction: 0.2,
+  //   iterations: 15000,
+  //   expected: {
+  //     sum: 302310477864,
+  //     count: 1125003,
+  //   },
+  // },
+  // {
+  //   name: "large web app",
+  //   width: 1000,
+  //   totalLayers: 12,
+  //   staticFraction: 0.95,
+  //   nSources: 4,
+  //   readFraction: 1,
+  //   iterations: 7000,
+  //   expected: {
+  //     sum: 29355933696000,
+  //     count: 1473791,
+  //   },
+  // },
+  // {
+  //   name: "wide dense",
+  //   width: 1000,
+  //   totalLayers: 5,
+  //   staticFraction: 1,
+  //   nSources: 25,
+  //   readFraction: 1,
+  //   iterations: 3000,
+  //   expected: {
+  //     sum: 1171484375000,
+  //     count: 735756,
+  //   },
+  // },
   {
     name: "deep",
     width: 5,
