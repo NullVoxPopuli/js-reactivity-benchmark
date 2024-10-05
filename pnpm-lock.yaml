@@ -11,6 +11,15 @@ importers:
       '@angular/core':
         specifier: 18.2.4
         version: 18.2.4(rxjs@7.8.1)(zone.js@0.15.0)
+      '@glimmer/global-context':
+        specifier: ^0.92.3
+        version: 0.92.3
+      '@glimmer/interfaces':
+        specifier: ^0.92.3
+        version: 0.92.3
+      '@glimmer/validator':
+        specifier: ^0.92.3
+        version: 0.92.3
       '@preact/signals':
         specifier: ^1.3.0
         version: 1.3.0(preact@10.24.0)
@@ -536,6 +545,21 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@glimmer/env@0.1.7':
+    resolution: {integrity: sha512-JKF/a9I9jw6fGoz8kA7LEQslrwJ5jms5CXhu/aqkBWk+PmZ6pTl8mlb/eJ/5ujBGTiQzBhy5AIWF712iA+4/mw==}
+
+  '@glimmer/global-context@0.92.3':
+    resolution: {integrity: sha512-tvlK5pt6oSe3furJ1KsO9vG/KmF9S98HLrcR48XbfwXlkuxvUeS94cdQId4GCN5naeX4OC4xm6eEjZWdc2s+jw==}
+
+  '@glimmer/interfaces@0.92.3':
+    resolution: {integrity: sha512-QwQeA01N+0h+TAi/J7iUnZtRuJy+093hNyagxDQBA6b1wCBw+q+al9+O6gmbWlkWE7EifzmNE1nnrgcecJBlJQ==}
+
+  '@glimmer/util@0.92.3':
+    resolution: {integrity: sha512-K1oH93gGU36slycxJ9CcFpUTsdOc4XQ6RuZFu5oRsxFYtEF5PSu7ik11h58fyeoaWOr1ebfkyAMawbeI2AJ5GA==}
+
+  '@glimmer/validator@0.92.3':
+    resolution: {integrity: sha512-HKrMYeW0YhiksSeKYqX2chUR/rz82j12DcY7p2dORQlTV3qlAfiE5zRTJH1KRA1X3ZMf7DI2/GOzkXwYp0o+3Q==}
+
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
     engines: {node: '>=6.0.0'}
@@ -644,6 +668,9 @@ packages:
     resolution: {integrity: sha512-fOvu7PCQjAj4eWDEuD8Xz5gpzFqXzGlxHZozHP4b9Jxv9APtdxL6STqztDzMLuRXEc4UpXGGhx029Xgm91QBeA==}
     cpu: [x64]
     os: [win32]
+
+  '@simple-dom/interface@1.4.0':
+    resolution: {integrity: sha512-l5qumKFWU0S+4ZzMaLXFU8tQZsicHEMEyAxI5kDFGhJsRqDwe0a7/iPA/GdxlGyDKseQQAgIz5kzU7eXTrlSpA==}
 
   '@solidjs/reactivity@0.0.9':
     resolution: {integrity: sha512-duaaHwXTTY/YF+H9AT4ZEiL6H9FwMxQOMrTIDpsRYLBkbl3Y/FKaeoYu7CK4Ontbra6/LAi0DZyb/M6vCcJoMw==}
@@ -1416,6 +1443,26 @@ snapshots:
   '@esbuild/win32-x64@0.23.1':
     optional: true
 
+  '@glimmer/env@0.1.7': {}
+
+  '@glimmer/global-context@0.92.3': {}
+
+  '@glimmer/interfaces@0.92.3':
+    dependencies:
+      '@simple-dom/interface': 1.4.0
+
+  '@glimmer/util@0.92.3':
+    dependencies:
+      '@glimmer/env': 0.1.7
+      '@glimmer/interfaces': 0.92.3
+
+  '@glimmer/validator@0.92.3':
+    dependencies:
+      '@glimmer/env': 0.1.7
+      '@glimmer/global-context': 0.92.3
+      '@glimmer/interfaces': 0.92.3
+      '@glimmer/util': 0.92.3
+
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
@@ -1489,6 +1536,8 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.21.3':
     optional: true
+
+  '@simple-dom/interface@1.4.0': {}
 
   '@solidjs/reactivity@0.0.9': {}
 

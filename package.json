@@ -14,6 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "@angular/core": "18.2.4",
+    "@glimmer/global-context": "^0.92.3",
+    "@glimmer/interfaces": "^0.92.3",
+    "@glimmer/validator": "^0.92.3",
     "@preact/signals": "^1.3.0",
     "@reactively/core": "^0.0.8",
     "@solidjs/reactivity": "^0.0.9",
